@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using canvasDrawing.Gui;
+using System.Collections.Generic;
 using System.Windows;
 
 namespace canvasDrawing
@@ -8,28 +9,29 @@ namespace canvasDrawing
     /// </summary>
     public partial class MainWindow : Window
     {
-        ParamWind paramWind;
+        //ParamWind paramWind;
 
-        ButtonsPanel btnPanel;
+        //ButtonsPanel btnPanel;
 
-        public Dictionary<string, UpdatableShape> shapesList = new Dictionary<string, UpdatableShape>();
+        //public Dictionary<string, UpdatableShape> shapesList = new Dictionary<string, UpdatableShape>();
         public MainWindow()
         {
             InitializeComponent();
+            ActualWindow actualWindow = new ActualWindow();
+            mainGrid.Children.Add(actualWindow);
+            //paramWind = new ParamWind(canvas);
 
-            paramWind = new ParamWind(canvas);
-
-            shapesList.Add("Rectangle", new Rectangle { name = "Rectangle" });
-            shapesList.Add("Circle", new Circle { name = "Circle" });
-
-
-            btnPanel = new ButtonsPanel();
-            btnPanel.addButton("Circle");
-            btnPanel.addButton("Rectangle");
-            drawShapesPanel.Children.Add(btnPanel);
+            //shapesList.Add("Rectangle", new Rectangle { name = "Rectangle" });
+            //shapesList.Add("Circle", new Circle { name = "Circle" });
 
 
-            btnPanel.buttonClickEvent += BtnPanel_buttonClickEvent;
+            //btnPanel = new ButtonsPanel();
+            //btnPanel.addButton("Circle");
+            //btnPanel.addButton("Rectangle");
+            //drawShapesPanel.Children.Add(btnPanel);
+
+
+            //btnPanel.buttonClickEvent += BtnPanel_buttonClickEvent;
             //foreach(UpdatableShape upshae in shape.shapes)
             //{
             //    btn = new Button();
@@ -40,11 +42,11 @@ namespace canvasDrawing
             //}
         }
 
-        private void BtnPanel_buttonClickEvent(object sender, string buttonName)
-        {
-            paramWind.drawWindowFor(shapesList[buttonName]);
-            CntCtrl.Content = paramWind;
-        }
+        //private void BtnPanel_buttonClickEvent(object sender, string buttonName)
+        //{
+        //    paramWind.drawWindowFor(shapesList[buttonName]);
+        //    CntCtrl.Content = paramWind;
+        //}
 
         //private void Btn_Click(object sender, RoutedEventArgs e)
         //{

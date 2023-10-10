@@ -71,6 +71,9 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Backend\Interfaces\IModifiableParameter.cs" />
+    <Compile Include="Gui\ActualWindow.xaml.cs">
+      <DependentUpon>ActualWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Gui\Buttons-Panel.xaml.cs">
       <DependentUpon>Buttons-Panel.xaml</DependentUpon>
     </Compile>
@@ -80,6 +83,10 @@
     </Compile>
     <Compile Include="Backend\shape classes\Rectangle.cs" />
     <Compile Include="Backend\abstract classes\UpdatableShape.cs" />
+    <Page Include="Gui\ActualWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Gui\Buttons-Panel.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

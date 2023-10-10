@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\abdul.sami\source\wpf\repos\canvasDrawing\CanvasDrawingWpf\canvasDrawing\App.xaml
-31771776266
+4-176121682
 
-121939901212
+13829820977
 13-1505183044
-Gui\Buttons-Panel.xaml;MainWindow.xaml;Gui\ParamWind.xaml;
+Gui\ActualWindow.xaml;Gui\Buttons-Panel.xaml;MainWindow.xaml;Gui\ParamWind.xaml;
 
-False
+True
 
