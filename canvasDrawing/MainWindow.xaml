@@ -21,7 +21,7 @@
                 </LinearGradientBrush>
             </Border.Background>
         <StackPanel Orientation="Vertical" Grid.Column="0" HorizontalAlignment="Center" Name="drawShapesPanel">
-                <Label Content="Draw Shapes" Foreground="White" FontSize="20" Margin="0 10 0 50" />
+                <!--<Label Content="Draw Shapes" Foreground="White" FontSize="20" Margin="0 10 0 50" />-->
 
                 <!--<Button x:Name="rectangle" Content=" rectangle" Click="ShowRectangle" Background="#fb6161" Foreground="White" BorderBrush="White" Height="25" Margin="0 10 0 10" />
                 <Button x:Name="Circle" Content=" circle" Click="ShowCircle" Background="#fb6161" Foreground="White" BorderBrush="White" Height="25"/>-->

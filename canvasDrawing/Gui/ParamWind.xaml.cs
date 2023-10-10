@@ -71,6 +71,7 @@ namespace canvasDrawing
         UpdatableShape theShape;
         public void drawWindowFor(UpdatableShape shape)
         {
+            theShape = shape;
             foreach(Control cntrol in controls)
             {
                 stackPanel.Children.Remove(cntrol);

@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\abdul.sami\source\wpf\repos\canvasDrawing\canvasDrawing\obj\Debug\
+C:\Users\abdul.sami\source\wpf\repos\canvasDrawing\CanvasDrawingWpf\canvasDrawing\obj\Debug\
 canvasDrawing
 none
 false
 DEBUG;TRACE
-C:\Users\abdul.sami\source\wpf\repos\canvasDrawing\canvasDrawing\App.xaml
-3-1442281380
+C:\Users\abdul.sami\source\wpf\repos\canvasDrawing\CanvasDrawingWpf\canvasDrawing\App.xaml
+31771776266
 
-121923846625
+121939901212
 13-1505183044
-Buttons-Panel.xaml;MainWindow.xaml;ParamWind.xaml;
+Gui\Buttons-Panel.xaml;MainWindow.xaml;Gui\ParamWind.xaml;
 
-True
+False
 

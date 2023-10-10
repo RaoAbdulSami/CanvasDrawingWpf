@@ -28,13 +28,13 @@ namespace canvasDrawing
         }
 
         Button btn;
-        public void addButton( string buttonName)
+        public void addButton(string buttonName)
         {
-                btn = new Button();
-                btn.Content = buttonName;
-                btn.Name = buttonName;
-                btn.Click += (sender,args)=>buttonClick(sender, buttonName);
-                ShapesSelectPanel.Children.Add(btn);
+            btn = new Button();
+            btn.Content = buttonName;
+            btn.Name = buttonName;
+            btn.Click += (sender, args) => buttonClick(sender, buttonName);
+            ShapesSelectPanel.Children.Add(btn);
         }
 
 
