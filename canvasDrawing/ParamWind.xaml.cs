@@ -18,7 +18,7 @@ namespace canvasDrawing
     /// <summary>
     /// Interaction logic for shape.xaml
     /// </summary>
-    public partial class ShapeParam : UserControl 
+    public partial class ParamWind : UserControl 
     {
         Grid grid = new Grid();
         StackPanel stackPanel = new StackPanel();
@@ -28,7 +28,7 @@ namespace canvasDrawing
         public List<UpdatableShape> shapes = new List<UpdatableShape>();
         List<Control> controls = new List<Control>();
         Canvas canvas;
-        public ShapeParam( Canvas canvas)
+        public ParamWind( Canvas canvas)
         {
             InitializeComponent();
 
@@ -52,9 +52,9 @@ namespace canvasDrawing
             stackPanel.Orientation = Orientation.Vertical;
 
     
-            shapes.Add(new Rectangle { name = "Rectangle"});
+            //shapes.Add(new Rectangle { name = "Rectangle"});
     
-            shapes.Add(new Circle { name = "Circle" });
+            //shapes.Add(new Circle { name = "Circle" });
 
             draw.Content = "Draw";
             draw.Background = Brushes.LightGray;
@@ -69,22 +69,22 @@ namespace canvasDrawing
 
         List<string> parameters;
         UpdatableShape theShape;
-        public void drawWindowFor(string shapename)
+        public void drawWindowFor(UpdatableShape shape)
         {
             foreach(Control cntrol in controls)
             {
                 stackPanel.Children.Remove(cntrol);
             }
            
-            theShape = shapes[0];
-            for (int i = 0; i< shapes.Count; i++)
-            {
-                if (shapename == shapes[i].name)
-                {
-                    theShape = shapes[i];
-                }
-            }
-            parameters = theShape.getParamNames();
+  
+            //for (int i = 0; i< shapesList.Count; i++)
+            //{
+            //    if (shapename == shapes[i].name)
+            //    {
+            //        theShape = shapes[i];
+            //    }
+            //}
+            parameters = shape.getParamNames();
             
             foreach(string paramName in parameters)
             {
@@ -145,5 +145,9 @@ namespace canvasDrawing
 
             theShape.draw(canvas);
         }
+
+
+
+
     }
 }

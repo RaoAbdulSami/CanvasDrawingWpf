@@ -59,10 +59,10 @@
       <DependentUpon>Buttons-Panel.xaml</DependentUpon>
     </Compile>
     <Compile Include="Circle.cs" />
-    <Compile Include="Rectangle.cs" />
-    <Compile Include="ShapeParam.xaml.cs">
-      <DependentUpon>ShapeParam.xaml</DependentUpon>
+    <Compile Include="ParamWind.xaml.cs">
+      <DependentUpon>ParamWind.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Rectangle.cs" />
     <Compile Include="UpdatableShape.cs" />
     <Compile Include="IShape.cs" />
     <Page Include="Buttons-Panel.xaml">
@@ -81,9 +81,9 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="ShapeParam.xaml">
-      <SubType>Designer</SubType>
+    <Page Include="ParamWind.xaml">
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <ItemGroup>

@@ -14,6 +14,6 @@ C:\Users\abdul.sami\source\wpf\repos\canvasDrawing\canvasDrawing\obj\Debug\canva
 C:\Users\abdul.sami\source\wpf\repos\canvasDrawing\canvasDrawing\obj\Debug\canvasDrawing.exe
 C:\Users\abdul.sami\source\wpf\repos\canvasDrawing\canvasDrawing\obj\Debug\canvasDrawing.pdb
 C:\Users\abdul.sami\source\wpf\repos\canvasDrawing\canvasDrawing\obj\Debug\Buttons-Panel.g.cs
-C:\Users\abdul.sami\source\wpf\repos\canvasDrawing\canvasDrawing\obj\Debug\ShapeParam.g.cs
 C:\Users\abdul.sami\source\wpf\repos\canvasDrawing\canvasDrawing\obj\Debug\Buttons-Panel.baml
-C:\Users\abdul.sami\source\wpf\repos\canvasDrawing\canvasDrawing\obj\Debug\ShapeParam.baml
+C:\Users\abdul.sami\source\wpf\repos\canvasDrawing\canvasDrawing\obj\Debug\ParamWind.g.cs
+C:\Users\abdul.sami\source\wpf\repos\canvasDrawing\canvasDrawing\obj\Debug\ParamWind.baml

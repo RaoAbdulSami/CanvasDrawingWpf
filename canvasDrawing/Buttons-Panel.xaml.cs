@@ -20,6 +20,7 @@ namespace canvasDrawing
     /// </summary>
     public partial class ButtonsPanel : UserControl
     {
+        public event EventHandler<string> buttonClickEvent;
         public ButtonsPanel()
         {
             InitializeComponent();
@@ -27,22 +28,19 @@ namespace canvasDrawing
         }
 
         Button btn;
-        public void getListofButtons( List<string> buttonNames)
+        public void addButton( string buttonName)
         {
-            foreach (string btnName in buttonNames)
-            {
                 btn = new Button();
-                btn.Content = btnName;
-                btn.Name = btnName;
-                btn.Click += (sender,args)=>buttonClick(sender,btnName);
+                btn.Content = buttonName;
+                btn.Name = buttonName;
+                btn.Click += (sender,args)=>buttonClick(sender, buttonName);
                 ShapesSelectPanel.Children.Add(btn);
-            }
         }
 
 
         private void buttonClick(object sender,string name)
         {
-
+            buttonClickEvent?.Invoke(this, name);
         }
         private void Btn_Click(object sender, RoutedEventArgs e)
         {

@@ -20,40 +20,58 @@ namespace canvasDrawing
     /// </summary>
     public partial class MainWindow : Window
     {
-        ParamWind shape;
-        Button btn;
-        Buttons_Panel
+        ParamWind paramWind;
+ 
+        ButtonsPanel btnPanel;
+
+        public Dictionary<string,UpdatableShape> shapesList = new Dictionary<string, UpdatableShape>();
         public MainWindow()
         {
             InitializeComponent();
 
-            shape = new ParamWind(canvas);
+            paramWind = new ParamWind(canvas);
 
-            foreach(UpdatableShape upshae in shape.shapes)
-            {
-                btn = new Button();
-                btn.Content = upshae.name;
-                btn.Name = upshae.name;
-                btn.Click += Btn_Click;
-                drawShapesPanel.Children.Add(btn);
-            }
+            shapesList.Add("Rectangle",new Rectangle { name = "Rectangle" }) ;
+            shapesList.Add("Circle",new Circle { name = "Circle" });
+
+
+            btnPanel = new ButtonsPanel();
+            btnPanel.addButton("Circle");
+            btnPanel.addButton("Rectangle");
+            drawShapesPanel.Children.Add(btnPanel);
+
+
+            btnPanel.buttonClickEvent += BtnPanel_buttonClickEvent;
+            //foreach(UpdatableShape upshae in shape.shapes)
+            //{
+            //    btn = new Button();
+            //    btn.Content = upshae.name;
+            //    btn.Name = upshae.name;
+            //    btn.Click += Btn_Click;
+            //    drawShapesPanel.Children.Add(btn);
+            //}
         }
 
-        private void Btn_Click(object sender, RoutedEventArgs e)
+        private void BtnPanel_buttonClickEvent(object sender, string buttonName)
         {
-            shape.drawWindowFor(((Control)sender).Name);
-            CntCtrl.Content = shape;
-
+            paramWind.drawWindowFor(shapesList[buttonName]);
+            CntCtrl.Content = paramWind;
         }
 
-        private void ShowRectangle(object sender, RoutedEventArgs e)
-        {
+        //private void Btn_Click(object sender, RoutedEventArgs e)
+        //{
+        //    shape.drawWindowFor(((Control)sender).Name);
 
-            shape.drawWindowFor("Rectangle");
-            CntCtrl.Content = shape;
+        //}
+
+        //private void ShowRectangle(object sender, RoutedEventArgs e)
+        //{
+
+        //    shape.drawWindowFor("Rectangle");
+        //    CntCtrl.Content = shape;
 
 
-        }
+        //}
 
        
 
@@ -61,13 +79,13 @@ namespace canvasDrawing
         
 
 
-        private void ShowCircle(object sender, RoutedEventArgs e)
-        {
+        //private void ShowCircle(object sender, RoutedEventArgs e)
+        //{
          
-            shape.drawWindowFor("Circle");
+        //    shape.drawWindowFor("Circle");
 
-            CntCtrl.Content = shape;
-        }
+        //    CntCtrl.Content = shape;
+        //}
 
        
        
