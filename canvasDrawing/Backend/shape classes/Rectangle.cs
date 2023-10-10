@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Controls;
 using System.Windows.Media;
-using System.Windows.Shapes;
 namespace canvasDrawing
 {
     class Rectangle : UpdatableShape
@@ -18,7 +14,7 @@ namespace canvasDrawing
             parameters.Add("width", 40);
             parameters.Add("height", 40);
         }
-        
+
         public override void draw(Canvas canvas)
         {
             System.Windows.Shapes.Rectangle rect = new System.Windows.Shapes.Rectangle
@@ -29,7 +25,7 @@ namespace canvasDrawing
             };
 
             canvas.Children.Add(rect);
-        
+
         }
 
         public override List<string> getParamNames()
@@ -37,7 +33,7 @@ namespace canvasDrawing
 
             return parameters.Keys.ToList();
         }
-       
+
 
         public override int getParamValue(string name)
         {
@@ -52,10 +48,10 @@ namespace canvasDrawing
         public override void setParamValue(string name, int val)
         {
             parameters[name] = val;
-           
+
         }
 
 
-        
+
     }
 }

@@ -1,24 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace canvasDrawing
 {
     /// <summary>
     /// Interaction logic for shape.xaml
     /// </summary>
-    public partial class ParamWind : UserControl 
+    public partial class ParamWind : UserControl
     {
         Grid grid = new Grid();
         StackPanel stackPanel = new StackPanel();
@@ -28,7 +18,7 @@ namespace canvasDrawing
         public List<UpdatableShape> shapes = new List<UpdatableShape>();
         List<Control> controls = new List<Control>();
         Canvas canvas;
-        public ParamWind( Canvas canvas)
+        public ParamWind(Canvas canvas)
         {
             InitializeComponent();
 
@@ -51,9 +41,9 @@ namespace canvasDrawing
             stackPanel.Background = Brushes.Black;
             stackPanel.Orientation = Orientation.Vertical;
 
-    
+
             //shapes.Add(new Rectangle { name = "Rectangle"});
-    
+
             //shapes.Add(new Circle { name = "Circle" });
 
             draw.Content = "Draw";
@@ -62,8 +52,8 @@ namespace canvasDrawing
             stackPanel2.Children.Add(draw);
 
             draw.Click += Draw_Click;
-            
-            
+
+
         }
 
 
@@ -72,12 +62,12 @@ namespace canvasDrawing
         public void drawWindowFor(UpdatableShape shape)
         {
             theShape = shape;
-            foreach(Control cntrol in controls)
+            foreach (Control cntrol in controls)
             {
                 stackPanel.Children.Remove(cntrol);
             }
-           
-  
+
+
             //for (int i = 0; i< shapesList.Count; i++)
             //{
             //    if (shapename == shapes[i].name)
@@ -86,14 +76,14 @@ namespace canvasDrawing
             //    }
             //}
             parameters = shape.getParamNames();
-            
-            foreach(string paramName in parameters)
+
+            foreach (string paramName in parameters)
             {
                 drawLabelandTextBox(paramName);
             }
             //drawButton();
 
-            
+
             this.Content = grid;
         }
 
@@ -103,7 +93,7 @@ namespace canvasDrawing
         TextBox textBox;
         void drawLabelandTextBox(string paramName)
         {
-             label = new Label();
+            label = new Label();
 
             label.Content = paramName;
             label.MinHeight = 20;
@@ -131,15 +121,15 @@ namespace canvasDrawing
         private void Draw_Click(object sender, RoutedEventArgs e)
         {
 
-          //  TextBox textBox;
+            //  TextBox textBox;
 
             foreach (Control tbox in controls)
             {
                 if (tbox is TextBox)
                 {
-                     textBox = (TextBox)tbox;
-                     int textboxValue = int.Parse(textBox.Text);
-                     theShape.setParamValue(tbox.Name, textboxValue);
+                    textBox = (TextBox)tbox;
+                    int textboxValue = int.Parse(textBox.Text);
+                    theShape.setParamValue(tbox.Name, textboxValue);
 
                 }
             }

@@ -1,9 +1,5 @@
 ﻿using canvasDrawing.Backend;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Controls;
 
 namespace canvasDrawing
@@ -18,12 +14,14 @@ namespace canvasDrawing
         public abstract int getParamValue(string name);
         public abstract void setParamValue(string name, int val);
 
-     
+        public abstract void draw(Canvas canvas);
+
+
     }
 
-   
 
 
 
-    
+
+
 }
