@@ -3,9 +3,10 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:canvasDrawing.Gui"
+        xmlns:local="clr-namespace:canvasDrawing"
+             xmlns:view="clr-namespace:canvasDrawing"
         mc:Ignorable="d"
-        Height="450" Width="800"
+        Height="430" Width="770"
      >
     <Grid>
 
@@ -14,18 +15,23 @@
             <ColumnDefinition  Width="100*"/>
         </Grid.ColumnDefinitions>
 
-        <StackPanel Grid.Column ="0" Orientation="Vertical" Name="leftPanel"/>
+        <StackPanel Grid.Column ="0" Orientation="Vertical" Name="leftPanel">
+       
+        </StackPanel>
+           
         <Grid Grid.Column="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height=" 50*"/>
                 <RowDefinition Height=" 50*"/>
             </Grid.RowDefinitions>
-            <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Vertical" Name="rightPanel"/>
+            <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Vertical" Name="rightPanel">
+                
+            </StackPanel>
 
             <Border Grid.Row="1" CornerRadius="25" BorderBrush="#fb6161" 
                     BorderThickness="2" Background="#FFFF">
 
-                <Canvas x:Name="canvas" Margin=" 15" x:FieldModifier="public" >
+                <Canvas x:Name="canvas" Margin=" 10" x:FieldModifier="public" >
 
                 </Canvas>
             </Border>

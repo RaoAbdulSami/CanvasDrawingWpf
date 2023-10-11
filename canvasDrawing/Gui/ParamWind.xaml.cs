@@ -15,9 +15,14 @@ namespace canvasDrawing
         StackPanel stackPanel2 = new StackPanel();
         Button draw = new Button();
 
-        public List<UpdatableShape> shapes = new List<UpdatableShape>();
+        //public List<UpdatableShape> shapes = new List<UpdatableShape>();
         List<Control> controls = new List<Control>();
         Canvas canvas;
+
+        public ParamWind()
+        {
+            InitializeComponent();
+        }
         public ParamWind(Canvas canvas)
         {
             InitializeComponent();
